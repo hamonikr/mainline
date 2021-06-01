@@ -585,7 +585,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 
 			if (k.version_main.contains(kern_running.version_main)){
 			//  if (k.version_main == kern_running.version_main){
-				stdout.printf("LOG : k.version_main : %s AND kern_running.version_main : %s\n", k.version_main, kern_running.version_main);
+				//  stdout.printf("LOG : k.version_main : %s AND kern_running.version_main : %s\n", k.version_main, kern_running.version_main);
 				found_running_kernel = true;
 				continue;
 			}
