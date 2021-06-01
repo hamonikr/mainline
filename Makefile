@@ -35,8 +35,7 @@ build_symbols := -X -D'INSTALL_PREFIX="$(prefix)"' \
 	-X -D'GETTEXT_PACKAGE="$(BRANDING_SHORTNAME)"' \
 	-X -D'URI_KERNEL_UBUNTU_MAINLINE="$(URI_KERNEL_UBUNTU_MAINLINE)"'
 
-misc_files := README.md \
-	INSTALL \
+misc_files := INSTALL \
 	$(BRANDING_SHORTNAME).desktop \
 	debian/control \
 	debian/copyright \

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-21 05:01-0500\n"
+"POT-Creation-Date: 2021-06-01 18:15+0900\n"
 "PO-Revision-Date: 2021-04-07 17:58+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -29,90 +29,90 @@ msgstr "Preuzimanje sadržaja..."
 msgid "Fetching index from kernel.ubuntu.com..."
 msgstr "Preuzimanje sadržaja sa kernel.ubuntu.com..."
 
-#: src/Common/LinuxKernel.vala:594
+#: src/Common/LinuxKernel.vala:597
 msgid "Could not find running kernel in list!"
 msgstr "Nemoguće je pronaći pokrenuti kernel na popisu!"
 
-#: src/Common/LinuxKernel.vala:600
+#: src/Common/LinuxKernel.vala:603
 msgid "Could not find any kernels to remove"
 msgstr "Nema pronađenih kernela za uklanjanje"
 
-#: src/Common/LinuxKernel.vala:609
+#: src/Common/LinuxKernel.vala:612
 msgid "The following kernels will be removed:"
 msgstr "Sljedeći kerneli će biti uklonjeni:"
 
-#: src/Common/LinuxKernel.vala:616
+#: src/Common/LinuxKernel.vala:619
 msgid "Continue ?"
 msgstr "Nastavi?"
 
-#: src/Common/LinuxKernel.vala:642 src/Console/AppConsole.vala:304
+#: src/Common/LinuxKernel.vala:645 src/Console/AppConsole.vala:304
 msgid "Latest update"
 msgstr "Najnovija nadopuna"
 
-#: src/Common/LinuxKernel.vala:653 src/Console/AppConsole.vala:311
+#: src/Common/LinuxKernel.vala:656 src/Console/AppConsole.vala:311
 msgid "Latest point update"
 msgstr "Najnovija ciljana nadopuna"
 
-#: src/Common/LinuxKernel.vala:661 src/Console/AppConsole.vala:316
+#: src/Common/LinuxKernel.vala:664 src/Console/AppConsole.vala:316
 #: src/Console/AppConsole.vala:377
 msgid "No updates found"
 msgstr "Nema pronađenih nadopuna"
 
-#: src/Common/LinuxKernel.vala:671
+#: src/Common/LinuxKernel.vala:674
 #, c-format
 msgid "Install Kernel Version %s ? (y/n): "
 msgstr "Instaliraj kernel inačice %s ? (d/n): "
 
-#: src/Common/LinuxKernel.vala:909
+#: src/Common/LinuxKernel.vala:912
 msgid "Packages Available"
 msgstr "Dostupni paketi"
 
-#: src/Common/LinuxKernel.vala:917
+#: src/Common/LinuxKernel.vala:920
 msgid "Packages Installed"
 msgstr "Instalirani paketi"
 
-#: src/Common/LinuxKernel.vala:998
+#: src/Common/LinuxKernel.vala:1001
 msgid "Available Kernels"
 msgstr "Dostupni kerneli"
 
-#: src/Common/LinuxKernel.vala:1005 src/Gtk/MainWindow.vala:186
+#: src/Common/LinuxKernel.vala:1008 src/Gtk/MainWindow.vala:186
 msgid "Installed"
 msgstr "Instalirano"
 
-#: src/Common/LinuxKernel.vala:1005 src/Gtk/MainWindow.vala:186
+#: src/Common/LinuxKernel.vala:1008 src/Gtk/MainWindow.vala:186
 #: src/Gtk/MainWindow.vala:628 src/Gtk/MainWindow.vala:642
 msgid "Running"
 msgstr "Pokrenuto"
 
-#: src/Common/LinuxKernel.vala:1042
+#: src/Common/LinuxKernel.vala:1045
 msgid "Downloading"
 msgstr "Preuzimanje"
 
-#: src/Common/LinuxKernel.vala:1061
+#: src/Common/LinuxKernel.vala:1064
 #: src/Utility/Gtk/CustomMessageDialog.vala:148
 #: src/Utility/Gtk/CustomMessageDialog.vala:152
 msgid "OK"
 msgstr "U redu"
 
-#: src/Common/LinuxKernel.vala:1066
+#: src/Common/LinuxKernel.vala:1069
 msgid "ERROR"
 msgstr "GREŠKA"
 
-#: src/Common/LinuxKernel.vala:1080 src/Gtk/MainWindow.vala:650
+#: src/Common/LinuxKernel.vala:1083 src/Gtk/MainWindow.vala:650
 msgid "This kernel is already installed."
 msgstr "Ovaj kernel je već instaliran."
 
-#: src/Common/LinuxKernel.vala:1106
+#: src/Common/LinuxKernel.vala:1109
 msgid "Installation completed. A reboot is required to use the new kernel."
 msgstr ""
 "Instalacija je završena. Potrebno je ponovno pokretanje računala kako bi se "
 "koristio novi kernel."
 
-#: src/Common/LinuxKernel.vala:1109
+#: src/Common/LinuxKernel.vala:1112
 msgid "Installation completed with errors"
 msgstr "Instalacija je završena s greškama"
 
-#: src/Common/LinuxKernel.vala:1124
+#: src/Common/LinuxKernel.vala:1127
 msgid ""
 "Selected kernel is currently running and cannot be removed.\n"
 " Install another kernel before removing this one."
@@ -120,19 +120,19 @@ msgstr ""
 "Odabrani kernel je trenutno pokernut i ne može se ukloniti.\n"
 " Instalirajte drugi kernel prije uklanjanja trenutnog kernela."
 
-#: src/Common/LinuxKernel.vala:1129
+#: src/Common/LinuxKernel.vala:1132
 msgid "Preparing to remove selected kernels"
 msgstr "Pripremanje uklanjanja odabranih kernela"
 
-#: src/Common/LinuxKernel.vala:1160 src/Common/LinuxKernel.vala:1207
+#: src/Common/LinuxKernel.vala:1163 src/Common/LinuxKernel.vala:1210
 msgid "Un-install completed"
 msgstr "Deinstalacija završena"
 
-#: src/Common/LinuxKernel.vala:1163 src/Common/LinuxKernel.vala:1210
+#: src/Common/LinuxKernel.vala:1166 src/Common/LinuxKernel.vala:1213
 msgid "Un-install completed with errors"
 msgstr "Deinstalacija završena s greškama"
 
-#: src/Common/LinuxKernel.vala:1176
+#: src/Common/LinuxKernel.vala:1179
 msgid ""
 "This kernel is currently running and cannot be removed.\n"
 " Install another kernel before removing this one."
