@@ -1,0 +1,435 @@
+mainline (1.0.14hamonikr1) jin; urgency=medium
+
+  * Release for HamoniKR
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 01 Jun 2021 15:05:31 +0900
+
+mainline (1.0.14) UNRELEASED; urgency=medium
+
+  * Remove unnecessary VERSION_INT and build-time dependency for "bc"
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Mon, 21 Dec 2020 05:00:22 -0500
+
+mainline (1.0.13) unstable; urgency=medium
+
+  * Improve some kernel and/or package version number string handling and comparison logic
+  * Improve tracking which update notifications have been seen/acknowledged, track major & minor updates separately
+  * https downloads
+  * New Italian translation. Updated French, Dutch, Ukranian, Turkish
+  * Temporarily disabled the "Changes" button. The ubuntu kernel-ppa site changed the way they provide changelog info.
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Fri, 18 Dec 2020 14:54:22 -0500
+
+mainline (1.0.12) unstable; urgency=medium
+
+  * Improve notify-send.sh, notify-action.sh, and notify-loop.sh some more
+  Replaced all remaining unecessary shubshells with direct varible operations
+  Went over all the quoting of variables, filenames, and globbing patterns
+  Use $XDG_RUNTIME_DIR instead of /tmp if available
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Sun, 24 May 2020 18:08:31 -0400
+
+mainline (1.0.11) unstable; urgency=medium
+
+  * Resolved several issues with notifications bacground processes and temp files
+  * Removed redundant notification setting, since now the desktop notifications are the only kind
+  * The background notification loop is restarted any time settings are saved in the app
+  so the settings now take effect immediately.
+  * When a new notifications is sent which replaces an existing notification,
+  it no longer adds more dbus monitor processes with each new update.
+  * Logging out and back in no longer adds more notify.sh processes. It still doesn't exit when you log out,
+  but at least it kills it's old instance when starting a new instance at logon.
+  * notify-send.sh and notify-action.sh are completely re-written and refactored to be more efficient and more reliable.
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Sat, 23 May 2020 00:05:21 -0400
+
+mainline (1.0.10) unstable; urgency=medium
+
+  * Notifications
+  When any action button pressed, close the notification
+  Once a notification for a given kernel has been sent, don't notify for that kernel again during the same login session
+  * Don't run check_updates() twice for no reason
+  * Expose concurrent_downloads as a configurable setting
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Tue, 19 May 2020 17:32:48 -0400
+
+mainline (1.0.9) unstable; urgency=medium
+
+  * Slick new desktop notifications with action buttons thanks to https://github.com/vlevit/notify-send.sh
+  * Fix many bugs wrt temp directories & file permissions
+  * un-hardcode "/usr" in various paths to installed files
+  * Added some quasi-hidden extra functionality in Settings if --debug
+  * Several fixes to the version string parsing and show/hide behavior
+  detect correct update available for notifications with -rc kernels enabled
+  don't hide a -rc kernel if it's installed, even if -rc kernels are disabled
+  don't notify for an installed kernel, whether it's running or not
+  for "available", compare highest installed kernel not running kernel
+  * Refactor much of Utils/*.vala out of existence
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Mon, 18 May 2020 20:41:52 -0400
+
+mainline (1.0.8) unstable; urgency=medium
+
+  * Don't hide the terminal window from the taskbar or pager
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Tue, 05 May 2020 22:07:47 -0400
+
+mainline (1.0.7) unstable; urgency=medium
+
+  * Delete .deb files after successful install, so cache/tmp doesn't just grow forever
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Sat, 02 May 2020 23:56:09 -0400
+
+mainline (1.0.6) unstable; urgency=medium
+
+  * generate translator credits from .po files
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Tue, 21 Apr 2020 15:26:27 -0400
+
+mainline (1.0.5) unstable; urgency=medium
+
+  * remove a little more unused code
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Tue, 14 Jan 2020 14:09:47 -0500
+
+mainline (1.0.4) unstable; urgency=medium
+  * Support vala 0.46 / Uubuntu 20.04
+    copy fix from https://gitlab.manjaro.org/applications/pamac/issues/649
+    Fill in a few missing dependencies (README.md.src, debian/control.src)
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Sat, 04 Jan 2020 03:58:01 -0500
+
+mainline (1.0.3) unstable; urgency=medium
+  * Change setting kernel_version_threshold to show_prev_majors
+    Instead of saying hide kernels older than major version N, where the user has to periodically increase N manually,
+    Now the setting says, hide kernels older than major version (CURRENT_HIGHEST minus N), where CURRENT_HIGHEST is determined on the fly every time, and N can stay the same 0 or 1 etc forever.
+    All of the current highest major version is always shown. The setting says how many previous major versions to add to that.
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Sat, 04 Jan 2020 01:13:54 -0500
+
+mainline (1.0.2) unstable; urgency=medium
+  * Makefile:
+    - Use one variable style everywhere
+    - Only regenerate .pot file if any source files changed
+    - Only regenerate .po files if .pot file changed
+    - Only rebuild .deb if any files changed
+    - Automatically run dch to edit debian/changelog when needed
+    - New $(BUILD_NUMBER) for deb filename
+    - New target "release_deb"
+      o automatic increment build number
+      o automatic reset build number when pkg_version changes
+      o unconditional full "make clean deb" every time
+      Allows to generate updated deb files with icrementing filenames without having to update pkg version
+    - Get most targets other than "release_deb" to properly do nothing unless something actually changed.
+      Example, run "make deb" twice in a row with no changes, the 2nd one will say "nothing to do"
+    The Makefile is now officially more feature rich and robust than the application itself ¯\_(ツ)_/¯
+  * Desktop icon fix for Wayland from Hugo Posnic <hugo.posnic@gmail.com>
+  * Ukranian translation - github:cappelikan
+  * Change setting: bool hide_older to int kernel_version_threshold
+    hide_older was a toggel on/off to hide kernel major versions older than a hardcoded value of 4
+    kernel_version_threshold is an integer, hide kernel major versions older than this value
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Fri, 03 Jan 2020 18:01:59 -0500
+
+mainline (1.0.1) unstable; urgency=medium
+  * Disabled buggy progress bar
+  * Add missing translators on credits window
+
+ -- Brian K. White <bw.aljex@gmail.com>  Mon, 18 Mar 2019 09:10:23 -0400
+
+mainline (1.0.0) disco; urgency=medium
+
+  * Rename project from "ukuu" to "mainline"
+  * Start version number over at 1.0.0
+  * Much reoganizing of source files
+  * Removed confliciting LICENCE.md, COPYING, and text in debian/copyright
+    COPYING had GPL3
+    LICENSE.md had LGPL2
+    debian/copyright had GPL2+
+    Asserting only GPL3 going forward
+  * Reformatted AUTHORS file per gnu.org example
+
+ -- Brian K. White <bw.aljex@gmail.com>  Sat, 16 Mar 2019 04:34:40 -0400
+
+ukuu (18.9.5-bkw) disco; urgency=medium
+  * More un-hardcoding branding/name/maintainer strings in source files
+    ukuu.desktop, debian/control, debian/copyright, ukuu.policy all generated from BRANDING.mak
+  * Remove build-deb.sh and build-source.sh
+    Now we have "make deb"
+  * Removed some more source cruft, stuff we aren't using from TeeJee utilities
+  * Updated the Spanish translation just from google translate.
+  * Remove ukuu-uninstall
+  * Make aria2 retry a few times
+  * Remove pointless curl dependency by using aria2c for connection test
+
+ -- Brian K. White <bw.aljex@gmail.com>  Wed, 13 Mar 2019 2:35:02 -0500
+
+ukuu (18.9.4-bkw) disco; urgency=medium
+  * Removed all grub options
+  * Fix formatting in per-kernel package list tooltip
+  * Clean up README.md
+  * Removed build-installers.sh and other references to sanity *.run installers
+  * Relocate config.json & ukuu-notify.sh to .config/ukuu/ dir
+  * Moved branding to BRANDING.mak so other scripts can read it too
+  * Removed all hard-coding from build-deb.sh & build-source.sh
+  * Turkish translation (github/kelebek333)
+  * Remove misc cruft
+
+ -- Brian K. White <bw.aljex@gmail.com>  Mon, 11 Mar 2019 17:50:38 -0500
+
+
+ukuu (18.9.3-bkw) cosmic; urgency=medium
+
+  * Fork from http://github.com/stevenpowerd/ukuu
+  * Merge http://github.com/cloyce/ukuu
+  * Remove references to paid version
+  * Remove donation window and other donation links
+  * Fix compile error
+  * Update Readme.md
+  * Branding - Change all branding strings to variables derived from makefile
+
+ -- Brian K. White <bw.aljex@gmail.com>  Fri, 8 Mar 2019 22:57:57 -0500
+
+
+ukuu (18.9.3) xenial; urgency=medium
+
+  * Fix build issue
+
+ -- Tony George <tony.george.kol@gmail.com>  Sun, 3 Feb 2019 10:00:00 +0530
+
+
+ukuu (18.9.1) xenial; urgency=medium
+
+  * Added message for new version
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 26 Jan 2019 10:00:00 +0530
+
+
+ukuu (18.9) xenial; urgency=medium
+
+  * Updated donation window
+
+ -- Tony George <tony.george.kol@gmail.com>  Wed, 05 Sep 2018 10:00:00 +0530
+
+
+ukuu (18.5.1) xenial; urgency=medium
+
+  * Fixed: Install linux-modules package if available
+
+  * Grub timeout will not be changed by default; Added option in Settings;
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 12 May 2018 10:00:00 +0530
+
+
+ukuu (18.1) xenial; urgency=medium
+
+  * Console: Added command: --install-latest
+
+  * Console: Added command: --install-point
+  
+  * Console: Added command: --list-installed
+  
+  * Console: Added command: --purge-old-kernels
+
+  * Gtk: Added button for removing older kernels
+
+  * Console: Show progressbar while fetching index
+
+  * Console: --check prints update info instead of listing kernels
+
+  * Added 3 sec timeout when testing internet connectivity
+
+  * Add Croatian translation by gogo
+
+ -- Tony George <tony.george.kol@gmail.com>  Fri, 12 Jan 2018 10:00:00 +0530
+
+
+ukuu (17.12.1) xenial; urgency=medium
+
+  * Added support for running ukuu in Wayland session
+
+  * Removed Gtk and Gdk dependencies for console version ('ukuu').
+  It can now be used on systems where display server is not available.
+
+  * Added --notify action for GTK version ('ukuu-gtk')
+
+  * Code for checking internet connectivity now uses 'curl'
+  instead of 'ping'. This supports systems where ping
+  may be disabled, and on systems using internet proxies.
+
+  * Installers now use XZ compression and are smaller in size
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 23 Dec 2017 10:00:00 +0530
+
+
+ukuu (17.12) xenial; urgency=medium
+
+  * Fixed: Use xdg-open to open CHANGES file instead of exo-open
+  * Fixed: User's home directory was not detected correctly
+  * Fixed sizing issues with message dialog on some versions of GTK+
+  * Fixed an error in parsing kernel version string. This would cause
+   an update notifcation even when there were no updates available.
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 09 Dec 2017 14:00:00 +0530
+
+
+ukuu (17.2.3) trusty; urgency=medium
+
+  * Fixed an issue with previous update
+
+ -- Tony George <tony.george.kol@gmail.com>  Mon, 20 Feb 2017 14:00:00 +0530
+
+
+ukuu (17.2.2) trusty; urgency=medium
+
+  * Show a message after install for booting previous kernels
+
+ -- Tony George <tony.george.kol@gmail.com>  Mon, 20 Feb 2017 10:00:00 +0530
+
+
+ukuu (17.2.1) trusty; urgency=medium
+
+  * Added option to set the timeout interval for GRUB menu
+
+  * Verify downloads after completion; Improved parsing for aria2;
+
+  * Added support to download or remove multiple kernels
+
+  * Fixed double entries in list for installed -ckt kernels
+
+  * Added Refresh button to main window
+
+  * Allow kernels to be removed even if internet is not connected
+
+ -- Tony George <tony.george.kol@gmail.com>  Mon, 06 Feb 2017 10:00:00 +0530
+
+ 
+ukuu (17.2) trusty; urgency=medium
+
+  * Fixed some minor issues
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 28 Jan 2017 14:00:00 +0530
+
+
+ukuu (17.1) trusty; urgency=medium
+
+  * Added option to display GRUB menu at boot time
+
+  * Removed unused code
+
+ -- Tony George <tony.george.kol@gmail.com>  Sat, 28 Jan 2017 10:00:00 +0530
+
+
+ukuu (16.12.1) trusty; urgency=medium
+
+  * Fixed: Notification options for bubble and dialog were not saved
+  to config file
+
+  * Fixed: List refresh fails on trusty. Older versions of aria2
+  does not support some arguments.
+
+  * Added Russian translation by Иннусик
+
+ -- Tony George <tony.george.kol@gmail.com>  Sun, 25 Dec 2016 10:00:00 +0530
+
+
+ukuu (16.12) trusty; urgency=medium
+
+  * Fixed an issue with update check. User would sometimes be prompted
+  to install an older version.
+
+  * Fixed an issue where the update notification script would cause
+  high CPU usage if internet connection was not active.
+
+  * Fixed an issue where the application would quit while refreshing
+  the cache
+
+  * Cache refresh is now much faster. Uses aria2 for running parallel
+  downloads.
+
+  * Added Swedish translation by Åke Engelbrektson
+
+  * Remove startup scripts when application is uninstalled
+
+ -- Tony George <tony.george.kol@gmail.com>  Wed, 7 Dec 2016 10:00:00 +0530
+
+
+ukuu (16.11.1) trusty; urgency=medium
+
+  * Fixed build for xenial: Added dependency for 'valac'
+
+ -- Tony George <tony.george.kol@gmail.com>  Sun, 27 Nov 2016 10:00:00 +0530
+
+
+ukuu (16.11) trusty; urgency=medium
+
+  * Changed main window layout
+
+  * Added option to cancel the initial refresh
+
+  * Removed row striping as it makes text unreadable with dark
+  GTK themes
+
+ -- Tony George <tony.george.kol@gmail.com>  Tue, 15 Nov 2016 10:00:00 +0530
+
+
+ukuu (16.7.2) trusty; urgency=medium
+
+  * Fixed: Download progress status line is not refreshed correctly
+  in terminal window
+
+ -- Tony George <tony.george.kol@gmail.com>  Wed, 13 Jul 2016 10:00:00 +0530
+
+
+ukuu (16.7.1) trusty; urgency=medium
+
+  * Fixed: Update notification is not diplayed for minor update if the
+  'notify major' option is selected in settings dialog
+
+  * Fixed: Update notification should not be shown if the new kernel is
+  already installed on the system but not active
+
+  * Fixed parsing of version string in format like '#40~14.04.1'(trusty)
+
+  * Moved cache directory to ~/.cache/ukuu
+
+ -- Tony George <tony.george.kol@gmail.com>  Tue, 12 Jul 2016 10:00:00 +0530
+
+
+ukuu (16.7) trusty; urgency=medium
+
+  * Fixed notifications
+
+  * Added notification dialog with options to install the update
+
+  * Added option to set notify interval
+
+  * Added icons to indicate kernel type
+
+  * Added statusbar in main window
+
+  * Fixed incorrect parsing of active kernel version string
+
+  * Offical Ubuntu kernels installed on the system will also be
+  displayed in the list
+
+  * Added option to uninstall installed Ubuntu kernels
+
+  * Fixed: The progress window would sometimes remain open even after
+  all index files are finished downloading
+
+  * Fixed: Reduced aria2 timeout to 10sec to avoid freezes while
+  downloading index files
+
+  * Added option to clean cache 'sudo ukuu --clean-cache
+
+ -- Tony George <tony.george.kol@gmail.com>  Fri, 08 Jul 2016 10:00:00 +0530
+
+
+ukuu (16.4.2) trusty; urgency=medium
+
+  * Initial release
+
+  * Updated test for checking internet connectivity
+
+ -- Tony George <tony.george.kol@gmail.com>  Mon, 18 Apr 2016 10:00:00 +0530

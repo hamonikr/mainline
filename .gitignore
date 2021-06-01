@@ -1,0 +1,10 @@
+/mainline
+/mainline-gtk
+/release
+*.c
+*.o
+*~
+.git
+*.swp
+.#*
+

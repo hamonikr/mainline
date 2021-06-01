@@ -1,0 +1,598 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mainline\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-21 05:01-0500\n"
+"PO-Revision-Date: 2016-12-13 16:46+0300\n"
+"Last-Translator: Faust3000 <slavusik1988@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-12-13 11:48+0000\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: src/Common/LinuxKernel.vala:88
+msgid "Distribution"
+msgstr "Дистрибутив"
+
+#: src/Common/LinuxKernel.vala:102
+#, fuzzy
+msgid "Architecture"
+msgstr "Системная архитектура"
+
+#: src/Common/LinuxKernel.vala:301
+msgid "Fetching index..."
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:338
+msgid "Fetching index from kernel.ubuntu.com..."
+msgstr "Получение сведений с kernel.ubuntu.com..."
+
+#: src/Common/LinuxKernel.vala:594
+#, fuzzy
+msgid "Could not find running kernel in list!"
+msgstr "Не удалось найти запрошенную версию"
+
+#: src/Common/LinuxKernel.vala:600
+#, fuzzy
+msgid "Could not find any kernels to remove"
+msgstr "Не удалось найти запрошенную версию"
+
+#: src/Common/LinuxKernel.vala:609
+msgid "The following kernels will be removed:"
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:616
+msgid "Continue ?"
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:642 src/Console/AppConsole.vala:304
+msgid "Latest update"
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:653 src/Console/AppConsole.vala:311
+msgid "Latest point update"
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:661 src/Console/AppConsole.vala:316
+#: src/Console/AppConsole.vala:377
+msgid "No updates found"
+msgstr "Обновлений не найдено"
+
+#: src/Common/LinuxKernel.vala:671
+#, c-format
+msgid "Install Kernel Version %s ? (y/n): "
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:909
+#, fuzzy
+msgid "Packages Available"
+msgstr "Установлено"
+
+#: src/Common/LinuxKernel.vala:917
+#, fuzzy
+msgid "Packages Installed"
+msgstr "Установлено"
+
+#: src/Common/LinuxKernel.vala:998
+msgid "Available Kernels"
+msgstr "Доступные ядра"
+
+#: src/Common/LinuxKernel.vala:1005 src/Gtk/MainWindow.vala:186
+msgid "Installed"
+msgstr "Установлено"
+
+#: src/Common/LinuxKernel.vala:1005 src/Gtk/MainWindow.vala:186
+#: src/Gtk/MainWindow.vala:628 src/Gtk/MainWindow.vala:642
+msgid "Running"
+msgstr "Используется"
+
+#: src/Common/LinuxKernel.vala:1042
+msgid "Downloading"
+msgstr "Загрузка"
+
+#: src/Common/LinuxKernel.vala:1061
+#: src/Utility/Gtk/CustomMessageDialog.vala:148
+#: src/Utility/Gtk/CustomMessageDialog.vala:152
+msgid "OK"
+msgstr "OK"
+
+#: src/Common/LinuxKernel.vala:1066
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: src/Common/LinuxKernel.vala:1080 src/Gtk/MainWindow.vala:650
+msgid "This kernel is already installed."
+msgstr "Это ядро уже установлено."
+
+#: src/Common/LinuxKernel.vala:1106
+msgid "Installation completed. A reboot is required to use the new kernel."
+msgstr ""
+"Установка завершена. Обязательно выполните перезагрузку, чтобы использовать "
+"новое ядро."
+
+#: src/Common/LinuxKernel.vala:1109
+msgid "Installation completed with errors"
+msgstr "Установка завершена с ошибками"
+
+#: src/Common/LinuxKernel.vala:1124
+#, fuzzy
+msgid ""
+"Selected kernel is currently running and cannot be removed.\n"
+" Install another kernel before removing this one."
+msgstr ""
+"Это ядро в настоящий момент работает и не может быть удалено.\n"
+" Установите другое ядро, прежде чем удалять его."
+
+#: src/Common/LinuxKernel.vala:1129
+msgid "Preparing to remove selected kernels"
+msgstr ""
+
+#: src/Common/LinuxKernel.vala:1160 src/Common/LinuxKernel.vala:1207
+msgid "Un-install completed"
+msgstr "Удаление завершено"
+
+#: src/Common/LinuxKernel.vala:1163 src/Common/LinuxKernel.vala:1210
+msgid "Un-install completed with errors"
+msgstr "Удаление завершено с ошибками"
+
+#: src/Common/LinuxKernel.vala:1176
+msgid ""
+"This kernel is currently running and cannot be removed.\n"
+" Install another kernel before removing this one."
+msgstr ""
+"Это ядро в настоящий момент работает и не может быть удалено.\n"
+" Установите другое ядро, прежде чем удалять его."
+
+#: src/Common/Main.vala:241
+msgid "Called from"
+msgstr ""
+
+#: src/Common/Main.vala:275
+#, fuzzy
+msgid "Notifications are disabled"
+msgstr "Уведомления"
+
+#: src/Common/Package.vala:134 src/Common/Package.vala:198
+#, c-format
+msgid "File not found: %s"
+msgstr "Файл не найден: %s"
+
+#: src/Console/AppConsole.vala:62 src/Gtk/AppGtk.vala:149
+msgid "Syntax"
+msgstr "Синтаксис"
+
+#: src/Console/AppConsole.vala:64
+msgid "Commands"
+msgstr ""
+
+#: src/Console/AppConsole.vala:66
+msgid "Check for kernel updates"
+msgstr "Проверить обновления ядра"
+
+#: src/Console/AppConsole.vala:67
+#, fuzzy
+msgid "Check for kernel updates and notify current user"
+msgstr "Проверить обновления ядра"
+
+#: src/Console/AppConsole.vala:68
+msgid "List all available mainline kernels"
+msgstr "Список всех доступных основных ядер"
+
+#: src/Console/AppConsole.vala:69
+#, fuzzy
+msgid "List installed kernels"
+msgstr "Список всех доступных основных ядер"
+
+#: src/Console/AppConsole.vala:70
+#, fuzzy
+msgid "Install latest mainline kernel"
+msgstr "Установить указанную ветку ядра"
+
+#: src/Console/AppConsole.vala:71
+msgid "Install latest point update for current series"
+msgstr ""
+
+#: src/Console/AppConsole.vala:72
+msgid "Install specified mainline kernel"
+msgstr "Установить указанную ветку ядра"
+
+#: src/Console/AppConsole.vala:73
+#, fuzzy
+msgid "Uninstall specified kernels"
+msgstr "Установить указанную ветку ядра"
+
+#: src/Console/AppConsole.vala:74 src/Gtk/MainWindow.vala:392
+msgid "Remove installed kernels older than running kernel"
+msgstr "Удалить более старшие установленные ядра, чем используемое"
+
+#: src/Console/AppConsole.vala:75
+#, fuzzy
+msgid "Download specified kernels"
+msgstr "Скачать пакеты для указанного ядра"
+
+#: src/Console/AppConsole.vala:76
+msgid "Remove files from application cache"
+msgstr "Удалить файлы из кэша программы"
+
+#: src/Console/AppConsole.vala:77
+#, fuzzy
+msgid "Show unstable and RC releases"
+msgstr "Скрыть нестабильные и релиз-кандидат версии"
+
+#: src/Console/AppConsole.vala:79 src/Gtk/AppGtk.vala:151
+msgid "Options"
+msgstr "Параметры"
+
+#: src/Console/AppConsole.vala:81
+msgid "Enable verbose debugging output"
+msgstr ""
+
+#: src/Console/AppConsole.vala:82
+msgid "Assume Yes for all prompts (non-interactive mode)"
+msgstr ""
+
+#: src/Console/AppConsole.vala:83
+msgid "Override user"
+msgstr ""
+
+#: src/Console/AppConsole.vala:86
+msgid "A version string taken from the output of --list"
+msgstr ""
+
+#: src/Console/AppConsole.vala:87
+msgid ""
+"One or more version strings (comma-separated) taken from the output of --list"
+msgstr ""
+
+#: src/Console/AppConsole.vala:162 src/Gtk/AppGtk.vala:136
+msgid "Unknown option"
+msgstr "Неизвестный параметр"
+
+#: src/Console/AppConsole.vala:164 src/Console/AppConsole.vala:256
+#: src/Console/AppConsole.vala:284
+#, fuzzy
+msgid "Run"
+msgstr "Используется"
+
+#: src/Console/AppConsole.vala:164
+#, fuzzy
+msgid "to list all options"
+msgstr "Показать все параметры"
+
+#: src/Console/AppConsole.vala:229 src/Console/AppConsole.vala:264
+msgid "No kernels specified"
+msgstr ""
+
+#: src/Console/AppConsole.vala:235
+msgid "Multiple kernels selected for installation. Select only one."
+msgstr ""
+
+#: src/Console/AppConsole.vala:253 src/Gtk/MainWindow.vala:100
+msgid "Could not find requested version"
+msgstr "Не удалось найти запрошенную версию"
+
+#: src/Console/AppConsole.vala:256
+msgid "and use a version string listed in first column"
+msgstr ""
+
+#: src/Console/AppConsole.vala:283
+msgid "Command not specified"
+msgstr ""
+
+#: src/Console/AppConsole.vala:284
+#, fuzzy
+msgid "to list all commands"
+msgstr "Показать все параметры"
+
+#: src/Console/AppConsole.vala:350
+msgid "Show"
+msgstr ""
+
+#: src/Console/AppConsole.vala:355 src/Console/AppConsole.vala:367
+#, fuzzy, c-format
+msgid "Kernel %s Available"
+msgstr "Установлено"
+
+#: src/Console/AppConsole.vala:357 src/Console/AppConsole.vala:369
+#: src/Gtk/MainWindow.vala:330
+msgid "Install"
+msgstr "Установить"
+
+#: src/Gtk/AppGtk.vala:153
+msgid "Print debug information"
+msgstr "Распечатать отладочную информацию"
+
+#: src/Gtk/AppGtk.vala:154
+msgid "Show all options"
+msgstr "Показать все параметры"
+
+#: src/Gtk/MainWindow.vala:146
+msgid "Kernel"
+msgstr "Ядро"
+
+#: src/Gtk/MainWindow.vala:174
+msgid "Status"
+msgstr "Состояние"
+
+#: src/Gtk/MainWindow.vala:314
+msgid "Refresh"
+msgstr "Обновить"
+
+#: src/Gtk/MainWindow.vala:321 src/Utility/TeeJee.System.vala:42
+msgid "Internet connection is not active"
+msgstr "Интернет соединение не активно"
+
+#: src/Gtk/MainWindow.vala:321 src/Gtk/MainWindow.vala:525
+#: src/Gtk/MainWindow.vala:655
+msgid "No Internet"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:339
+msgid "Multiple Kernels Selected"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:339
+msgid "Select a single kernel to install"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:342 src/Gtk/MainWindow.vala:353
+msgid "Not Selected"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:342
+msgid "Select the kernel to install"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:347
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/Gtk/MainWindow.vala:353
+msgid "Select the kernels to remove"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:383 src/Gtk/MainWindow.vala:417
+#: src/Gtk/MainWindow.vala:687
+msgid "Close window to exit..."
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:391
+msgid "Purge"
+msgstr "Очистить"
+
+#: src/Gtk/MainWindow.vala:424
+msgid "Changes"
+msgstr "Изменения"
+
+#: src/Gtk/MainWindow.vala:435 src/Gtk/SettingsDialog.vala:50
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/Gtk/MainWindow.vala:458
+msgid "About"
+msgstr "О программе"
+
+#: src/Gtk/MainWindow.vala:503
+msgid "Kernel upgrade utility for Ubuntu-based distributions"
+msgstr "Программа обновления ядра для дистрибутивов на базе Ubuntu"
+
+#: src/Gtk/MainWindow.vala:504
+msgid "Forked"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:504
+msgid "Original"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:525 src/Gtk/MainWindow.vala:655
+#, fuzzy
+msgid "Internet connection is not active."
+msgstr "Интернет соединение не активно"
+
+#: src/Gtk/MainWindow.vala:544
+msgid "Refreshing..."
+msgstr "Обновление..."
+
+#: src/Gtk/MainWindow.vala:638
+#, fuzzy
+msgid "available"
+msgstr "Установлено"
+
+#: src/Gtk/MainWindow.vala:650
+#, fuzzy
+msgid "Already Installed"
+msgstr "Установлено"
+
+#: src/Gtk/ProgressWindow.vala:144 src/Gtk/TerminalWindow.vala:149
+#: src/Utility/Gtk/CustomMessageDialog.vala:153
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/Gtk/SettingsDialog.vala:60
+msgid "Notification"
+msgstr "Уведомления"
+
+#: src/Gtk/SettingsDialog.vala:67
+msgid "Notify if a major release is available"
+msgstr "Уведомлять, если доступно крупное обновление"
+
+#: src/Gtk/SettingsDialog.vala:78
+msgid "Notify if a point release is available"
+msgstr "Уведомлять, если доступно небольшое обновление"
+
+#: src/Gtk/SettingsDialog.vala:89
+msgid "(Allowing intervals in seconds for --debug)"
+msgstr ""
+
+#: src/Gtk/SettingsDialog.vala:112
+msgid "Check every"
+msgstr "Проверять каждые"
+
+#: src/Gtk/SettingsDialog.vala:142
+msgid "Hour(s)"
+msgstr "Час(ов)"
+
+#: src/Gtk/SettingsDialog.vala:144
+msgid "Day(s)"
+msgstr "День(дней)"
+
+#: src/Gtk/SettingsDialog.vala:146
+msgid "Week(s)"
+msgstr "Неделю(ли)"
+
+#: src/Gtk/SettingsDialog.vala:149
+msgid "Second(s)"
+msgstr ""
+
+#: src/Gtk/SettingsDialog.vala:155
+msgid "Display"
+msgstr "Вид"
+
+#: src/Gtk/SettingsDialog.vala:163
+msgid "Hide unstable and RC releases"
+msgstr "Скрыть нестабильные и релиз-кандидат версии"
+
+#: src/Gtk/SettingsDialog.vala:177
+msgid "Show N previous major versions "
+msgstr ""
+
+#: src/Gtk/SettingsDialog.vala:192
+msgid "Other"
+msgstr ""
+
+#: src/Gtk/SettingsDialog.vala:200
+#, fuzzy
+msgid "Skip internet connection check"
+msgstr "Интернет соединение не активно"
+
+#: src/Gtk/SettingsDialog.vala:213
+#, fuzzy
+msgid "Internet connection timeout in "
+msgstr "Интернет соединение не активно"
+
+#: src/Gtk/SettingsDialog.vala:228
+msgid "seconds"
+msgstr ""
+
+#: src/Gtk/SettingsDialog.vala:235
+msgid "Max concurrent downloads"
+msgstr ""
+
+#: src/Gtk/TerminalWindow.vala:159 src/Utility/Gtk/AboutWindow.vala:294
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/Utility/Gtk/AboutWindow.vala:271 src/Utility/Gtk/AboutWindow.vala:288
+msgid "Credits"
+msgstr "Создатели"
+
+#: src/Utility/Gtk/AboutWindow.vala:284
+msgid "Back"
+msgstr "Назад"
+
+#: src/Utility/Gtk/AboutWindow.vala:313
+msgid "Authors"
+msgstr "Авторы"
+
+#: src/Utility/Gtk/AboutWindow.vala:321
+msgid "Contributions"
+msgstr "Взносы"
+
+#: src/Utility/Gtk/AboutWindow.vala:329
+msgid "Artists"
+msgstr "Художники"
+
+#: src/Utility/Gtk/AboutWindow.vala:337
+msgid "Translators"
+msgstr "Переводчики"
+
+#: src/Utility/Gtk/AboutWindow.vala:345
+msgid "Documenters"
+msgstr "Составители документации"
+
+#: src/Utility/Gtk/AboutWindow.vala:353
+#, fuzzy
+msgid "Third Party Inclusions"
+msgstr "Сторонние инструменты"
+
+#: src/Utility/Gtk/CustomMessageDialog.vala:157
+msgid "Yes"
+msgstr ""
+
+#: src/Utility/Gtk/CustomMessageDialog.vala:158
+msgid "No"
+msgstr ""
+
+#: src/Utility/Gtk/GtkHelper.vala:67
+msgid "Missing Icon"
+msgstr "Значок отсутствует"
+
+#: src/Utility/TeeJee.FileSystem.vala:71
+#, fuzzy
+msgid "File deleted"
+msgstr "Файловая система"
+
+#: src/Utility/TeeJee.FileSystem.vala:76 src/Utility/TeeJee.FileSystem.vala:256
+#, fuzzy
+msgid "Failed to delete file"
+msgstr "Не удалось записать файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:96
+msgid "Failed to read file"
+msgstr "Не удалось прочитать файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:123
+#, fuzzy
+msgid "File saved"
+msgstr "Файловая система"
+
+#: src/Utility/TeeJee.FileSystem.vala:129
+msgid "Failed to write file"
+msgstr "Не удалось записать файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:141
+#, fuzzy
+msgid "File copied"
+msgstr "Не удалось скопировать файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:148
+msgid "Failed to copy file"
+msgstr "Не удалось скопировать файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:158
+msgid "File not found"
+msgstr "Файл не найден"
+
+#: src/Utility/TeeJee.FileSystem.vala:171
+#, fuzzy
+msgid "File moved"
+msgstr "Удалить"
+
+#: src/Utility/TeeJee.FileSystem.vala:176
+msgid "Failed to move file"
+msgstr "Не удалось переместить файл"
+
+#: src/Utility/TeeJee.FileSystem.vala:233
+#: src/Utility/TeeJee.FileSystem.vala:236
+#, fuzzy
+msgid "Created directory"
+msgstr "Используемая кэш-папка"
+
+#: src/Utility/TeeJee.FileSystem.vala:243
+msgid "Failed to create dir"
+msgstr "Не удалось создать папку"
+
+#: src/Utility/TeeJee.FileSystem.vala:255
+msgid "Deleted"
+msgstr ""
+
+#: src/Utility/TeeJee.Logging.vala:59
+msgid "E"
+msgstr "E"
+
+#: src/Utility/TeeJee.Logging.vala:84
+msgid "D"
+msgstr ""
