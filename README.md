@@ -1,28 +1,18 @@
-### Ubuntu Mainline Kernel Installer
-This is a tool for installing the latest mainline Linux kernel on Ubuntu-based distributions.
+### mainline 우분투 커널 업그레이드 도구
 
-![Main window screenshot](main_window.png)
+이 프로그램은 `sudo apt upgrade` 를 통해 제공되지 않는 특정 버전 또는 최신 커널을 사용하고 싶은 경우
+터미널을 사용하지 않고 GUI 를 통한 손쉬운 커널 업그레이드를 제공하는 프로그램 입니다.
 
-### Features
-* Fetches list of available kernels from [Ubuntu Mainline PPA](http://kernel.ubuntu.com/~kernel-ppa/mainline/)
-* Optionally watches and displays notifications when a new kernel update is available
-* Downloads and installs packages automatically
-* Display available and installed kernels conveniently
-* Install/remove kernels from gui
-* For each kernel, the related packages (headers & modules) are installed or removed at the same time
+ * upstream : https://github.com/bkw777/mainline
+ * latest version : 1.0.14
 
-### Downloads & Source Code
-mainline is written using Vala and GTK3. Source code and binaries are available from the [GitHub project page](https://github.com/bkw777/mainline).
+![Main window screenshot](main_window_ko.png)
 
-[cappelikan](https://github.com/cappelikan) maintains a PPA at: <https://code.launchpad.net/~cappelikan/+archive/ubuntu/ppa>
-
-	sudo add-apt-repository ppa:cappelikan/ppa
-	sudo apt update
-	sudo apt install mainline
-
-### Build
+### Build & Test
 	sudo apt install libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
+
 	git clone https://github.com/bkw777/mainline.git
+	
 	cd mainline
 	make
 	sudo make install
@@ -32,17 +22,3 @@ mainline is a fork of [ukuu](https://github.com/teejee2008/ukuu)
 
 The original author stopped maintaining the original GPL version of ukuu and switched to a [paid license](https://teejeetech.in/tag/ukuu/) for future versions.
 
-### Enhancements / Deviations from the original author's final GPL version
-* (from [stevenpowerd](https://github.com/stevenpowered/ukuu)) Options controlling the internet connection check
-* (from [cloyce](https://github.com/cloyce/ukuu)) Option to include or hide pre-release kernels
-* Changed name from "ukuu" to "mainline"
-* Removed all GRUB options
-* Removed all donate buttons, links, dialogs
-* Remove source cruft
-* Better temp and cache directory behavior
-* Better desktop notification behavior
-
-### TODO & WIP
-* Make the notification bg process detect when the user logs off and exit itself.
-* Save & restore window dimensions.
-* Move the notification/dbus code into the app and make an "applet mode"
