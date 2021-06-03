@@ -10,7 +10,11 @@
  * upstream : https://github.com/bkw777/mainline
  * latest version : 1.0.14
 
-![Main window screenshot](main_window_ko.png)
+![Main window screenshot](imgs/main_window_ko.png)
+
+부팅 시 사용될 커널을 설정할 수 있는 기능 제공
+
+![boot-select screenshot](imgs/main_window_ko_1.png)
 
 # 프로그램 설치
 
