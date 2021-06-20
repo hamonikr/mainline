@@ -108,6 +108,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 	// dep: uname
 	public static string check_running_kernel(){
 		string ver = "";
+		string full_ver = "";
 		
 		string std_out;
 		exec_sync("uname -r", out std_out, null);
@@ -116,7 +117,14 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		ver = std_out.strip().replace("\n","");
 		log_msg("Running kernel" + ": %s".printf(ver));
 
-		return ver;
+		//  add kernel compile version
+		exec_sync("uname -v",out std_out, null);
+		log_debug(std_out);
+
+		full_ver = ver + "." + std_out.split_set("#-")[1];
+		log_msg("Running kernel version" + ": %s".printf(std_out));
+
+		return full_ver;
 	}
 
 	public static void initialize_regex(){
