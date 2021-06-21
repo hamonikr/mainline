@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 14:54+0900\n"
+"POT-Creation-Date: 2021-06-21 11:07+0900\n"
 "PO-Revision-Date: 2020-03-10 15:59+0300\n"
 "Last-Translator: Gökhan GÖKKAYA <gokhanlnx@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -21,97 +21,97 @@ msgstr "Dağıtım"
 msgid "Architecture"
 msgstr "Sistem mimarisi"
 
-#: src/Common/LinuxKernel.vala:301
+#: src/Common/LinuxKernel.vala:309
 msgid "Fetching index..."
 msgstr "İçerik dizini alınıyor..."
 
-#: src/Common/LinuxKernel.vala:338
+#: src/Common/LinuxKernel.vala:346
 msgid "Fetching index from kernel.ubuntu.com..."
 msgstr "İçerik listesi kernel.ubuntu.com alanından alınıyor..."
 
-#: src/Common/LinuxKernel.vala:597
+#: src/Common/LinuxKernel.vala:605
 msgid "Could not find running kernel in list!"
 msgstr "İstenen sürüm bulunamadı!"
 
-#: src/Common/LinuxKernel.vala:603
+#: src/Common/LinuxKernel.vala:611
 msgid "Could not find any kernels to remove"
 msgstr "Kaldırılacak çekirdek bulunamadı"
 
-#: src/Common/LinuxKernel.vala:612
+#: src/Common/LinuxKernel.vala:620
 msgid "The following kernels will be removed:"
 msgstr "Aşağıdaki çekirdekler silinecek:"
 
-#: src/Common/LinuxKernel.vala:619
+#: src/Common/LinuxKernel.vala:627
 msgid "Continue ?"
 msgstr "Devam et ?"
 
-#: src/Common/LinuxKernel.vala:645 src/Console/AppConsole.vala:304
+#: src/Common/LinuxKernel.vala:653 src/Console/AppConsole.vala:304
 msgid "Latest update"
 msgstr "Son güncelleme"
 
-#: src/Common/LinuxKernel.vala:656 src/Console/AppConsole.vala:311
+#: src/Common/LinuxKernel.vala:664 src/Console/AppConsole.vala:311
 msgid "Latest point update"
 msgstr "Son güncelleme noktası"
 
-#: src/Common/LinuxKernel.vala:664 src/Console/AppConsole.vala:316
+#: src/Common/LinuxKernel.vala:672 src/Console/AppConsole.vala:316
 #: src/Console/AppConsole.vala:377
 msgid "No updates found"
 msgstr "Güncelleme bulunamadı"
 
-#: src/Common/LinuxKernel.vala:674
+#: src/Common/LinuxKernel.vala:682
 #, fuzzy, c-format
 msgid "Install Kernel Version %s ? (y/n): "
 msgstr "Linux v%s Kur ? (e/h): "
 
-#: src/Common/LinuxKernel.vala:912
+#: src/Common/LinuxKernel.vala:920
 msgid "Packages Available"
 msgstr "Mevcut Paketler"
 
-#: src/Common/LinuxKernel.vala:920
+#: src/Common/LinuxKernel.vala:928
 msgid "Packages Installed"
 msgstr "Kurulu Paketler"
 
-#: src/Common/LinuxKernel.vala:1001
+#: src/Common/LinuxKernel.vala:1009
 msgid "Available Kernels"
 msgstr "Mevcut Çekirdekler"
 
-#: src/Common/LinuxKernel.vala:1008 src/Gtk/MainWindow.vala:187
+#: src/Common/LinuxKernel.vala:1016 src/Gtk/MainWindow.vala:187
 msgid "Installed"
 msgstr "Kurulu"
 
-#: src/Common/LinuxKernel.vala:1008 src/Gtk/MainWindow.vala:187
+#: src/Common/LinuxKernel.vala:1016 src/Gtk/MainWindow.vala:187
 #: src/Gtk/MainWindow.vala:648 src/Gtk/MainWindow.vala:662
 msgid "Running"
 msgstr "Çalışıyor"
 
-#: src/Common/LinuxKernel.vala:1045
+#: src/Common/LinuxKernel.vala:1053
 msgid "Downloading"
 msgstr "İndiriliyor"
 
-#: src/Common/LinuxKernel.vala:1064
+#: src/Common/LinuxKernel.vala:1072
 #: src/Utility/Gtk/CustomMessageDialog.vala:148
 #: src/Utility/Gtk/CustomMessageDialog.vala:152
 msgid "OK"
 msgstr "TAMAM"
 
-#: src/Common/LinuxKernel.vala:1069
+#: src/Common/LinuxKernel.vala:1077
 msgid "ERROR"
 msgstr "HATA"
 
-#: src/Common/LinuxKernel.vala:1083 src/Gtk/MainWindow.vala:670
+#: src/Common/LinuxKernel.vala:1091 src/Gtk/MainWindow.vala:670
 msgid "This kernel is already installed."
 msgstr "Bu çekirdek zaten kurulu."
 
-#: src/Common/LinuxKernel.vala:1109
+#: src/Common/LinuxKernel.vala:1117
 msgid "Installation completed. A reboot is required to use the new kernel."
 msgstr ""
 "Kurulum tamamlandı. Yeni çekirdeği kullanmak için yeniden başlatma gerekiyor."
 
-#: src/Common/LinuxKernel.vala:1112
+#: src/Common/LinuxKernel.vala:1120
 msgid "Installation completed with errors"
 msgstr "Kurulum hatalarla tamamlandı"
 
-#: src/Common/LinuxKernel.vala:1127
+#: src/Common/LinuxKernel.vala:1135
 msgid ""
 "Selected kernel is currently running and cannot be removed.\n"
 " Install another kernel before removing this one."
@@ -119,19 +119,19 @@ msgstr ""
 "Seçilen çekirdek şu anda çalışıyor ve kaldırılamıyor.\n"
 " Bunu kaldırmadan önce başka bir çekirdek yükleyin."
 
-#: src/Common/LinuxKernel.vala:1132
+#: src/Common/LinuxKernel.vala:1140
 msgid "Preparing to remove selected kernels"
 msgstr "Seçilen çekirdekleri kaldırmak için hazırlanıyor"
 
-#: src/Common/LinuxKernel.vala:1163 src/Common/LinuxKernel.vala:1210
+#: src/Common/LinuxKernel.vala:1171 src/Common/LinuxKernel.vala:1218
 msgid "Un-install completed"
 msgstr "Kaldırma tamamlandı"
 
-#: src/Common/LinuxKernel.vala:1166 src/Common/LinuxKernel.vala:1213
+#: src/Common/LinuxKernel.vala:1174 src/Common/LinuxKernel.vala:1221
 msgid "Un-install completed with errors"
 msgstr "Kaldırma hatalarla tamamlandı"
 
-#: src/Common/LinuxKernel.vala:1179
+#: src/Common/LinuxKernel.vala:1187
 msgid ""
 "This kernel is currently running and cannot be removed.\n"
 " Install another kernel before removing this one."
