@@ -12,4 +12,5 @@ Comment[ko]=우분투 메인라인 커널 업그레이드 도구
 StartupNotify=true;
 Categories=System;
 StartupWMClass=mainline-gtk
-Keywords=kernel;커널;업그레이드;업데이트;upgrade;update;
+Keywords=kernel;upgrade;update;
+Keywords[ko]=kernel;커널;업그레이드;업데이트;upgrade;update;

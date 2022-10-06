@@ -40,11 +40,11 @@ public class MainWindow : Gtk.Window{
 	private Gtk.TreeView tv;
 	private Gtk.Button btn_refresh;
 	private Gtk.Button btn_install;
-	private Gtk.Button btn_remove;
-	private Gtk.Button btn_select;
-	private Gtk.Button btn_purge;
+	private Gtk.Button btn_uninstall;
+	private Gtk.Button btn_uninstall_old;
 	private Gtk.Button btn_changes;
 	private Gtk.Label lbl_info;
+	private Gtk.Button btn_select;	
 
 	// helper members
 
@@ -104,7 +104,7 @@ public class MainWindow : Gtk.Window{
 				exit(1);
 			}
 			else{
-				install(kern_requested);
+				kinst(kern_requested);
 			}
 
 			break;
@@ -294,14 +294,14 @@ public class MainWindow : Gtk.Window{
 	private void set_button_state(){
 		if (selected_kernels.size == 0){
 			btn_install.sensitive = false;
-			btn_remove.sensitive = false;
-			btn_purge.sensitive = true;
+			btn_uninstall.sensitive = false;
+			btn_uninstall_old.sensitive = true;
 			btn_changes.sensitive = false;
 		}
 		else{
 			btn_install.sensitive = (selected_kernels.size == 1) && !selected_kernels[0].is_installed;
-			btn_remove.sensitive = selected_kernels[0].is_installed && !selected_kernels[0].is_running;
-			btn_purge.sensitive = true;
+			btn_uninstall.sensitive = selected_kernels[0].is_installed && !selected_kernels[0].is_running;
+			btn_uninstall_old.sensitive = true;
 			btn_changes.sensitive = (selected_kernels.size == 1) && file_exists(selected_kernels[0].changes_file);
 		}
 	}
@@ -334,7 +334,7 @@ public class MainWindow : Gtk.Window{
 
 		button.clicked.connect(() => {
 			if (selected_kernels.size == 1){
-				install(selected_kernels[0]);
+				kinst(selected_kernels[0]);
 			}
 			else if (selected_kernels.size > 1){
 				gtk_messagebox(_("Multiple Kernels Selected"),_("Select a single kernel to install"), this, true);
@@ -344,14 +344,14 @@ public class MainWindow : Gtk.Window{
 			}
 		});
 
-		// remove
-		button = new Gtk.Button.with_label (_("Remove"));
+		// uninstall
+		button = new Gtk.Button.with_label (_("Uninstall"));
 		hbox.pack_start (button, true, true, 0);
-		btn_remove = button;
+		btn_uninstall = button;
 
 		button.clicked.connect(() => {
 			if (selected_kernels.size == 0){
-				gtk_messagebox(_("Not Selected"),_("Select the kernels to remove"), this, true);
+				gtk_messagebox(_("Not Selected"),_("Select the kernels to uninstall"), this, true);
 			}
 			else if (selected_kernels.size > 0){
 				
@@ -379,7 +379,7 @@ public class MainWindow : Gtk.Window{
 
 				string sh = BRANDING_SHORTNAME;
 				if (LOG_DEBUG) sh += " --debug";
-				sh += " --remove %s\n".printf(names)
+				sh += " --uninstall %s\n".printf(names)
 				+ "echo \n"
 				+ "echo '"+_("Close window to exit...")+"'\n";
 
@@ -388,30 +388,11 @@ public class MainWindow : Gtk.Window{
 			}
 		});
 
-		// select
-		button = new Gtk.Button.with_label (_("Select"));
-		button.set_tooltip_text(_("Select the kernel to boot"));
+		// uninstall-old
+		button = new Gtk.Button.with_label (_("Uninstall Old"));
+		button.set_tooltip_text(_("Uninstall kernels older than running kernel"));
 		hbox.pack_start (button, true, true, 0);
-		btn_select = button;
-
-		button.clicked.connect(() => {
-
-			try {
-				string standard_output, standard_error;
-				int exit_status;
-				Process.spawn_command_line_sync ("/usr/local/bin/boot-select", out standard_output,
-													   						   out standard_error,
-													   						   out exit_status);
-			} catch (SpawnError e) {
-				stderr.printf ("%s\n", e.message);
-			}
-		});
-
-		// purge
-		button = new Gtk.Button.with_label (_("Purge"));
-		button.set_tooltip_text(_("Remove installed kernels older than running kernel"));
-		hbox.pack_start (button, true, true, 0);
-		btn_purge = button;
+		btn_uninstall_old = button;
 
 		button.clicked.connect(() => {
 
@@ -431,13 +412,32 @@ public class MainWindow : Gtk.Window{
 				tv_refresh();
 			});
 
-			string sh = BRANDING_SHORTNAME+" --purge-old-kernels";
+			string sh = BRANDING_SHORTNAME+" --uninstall-old";
 			if (LOG_DEBUG) sh += " --debug";
 			sh += "\necho \n"
 			+ "echo '"+_("Close window to exit...")+"'\n";
 
 			save_bash_script_temp(sh,t_file);
 			term.execute_script(t_file,t_dir);
+		});
+
+		// select
+		button = new Gtk.Button.with_label (_("Boot Select"));
+		button.set_tooltip_text(_("Select the kernel to boot"));
+		hbox.pack_start (button, true, true, 0);
+		btn_select = button;
+
+		button.clicked.connect(() => {
+
+			try {
+				string standard_output, standard_error;
+				int exit_status;
+				Process.spawn_command_line_sync ("/usr/local/bin/boot-select", out standard_output,
+													   						   out standard_error,
+													   						   out exit_status);
+			} catch (SpawnError e) {
+				stderr.printf ("%s\n", e.message);
+			}
 		});
 
 		// changes
@@ -512,7 +512,7 @@ public class MainWindow : Gtk.Window{
 			"pl: Waldemar Konik <valdi74@github>",
 			"ru: Faust3000 <slavusik1988@gmail.com>",
 			"sv: Åke Engelbrektson <eson@svenskasprakfiler.se>",
-			"tr: Gökhan GÖKKAYA <gokhanlnx@gmail.com>",
+			"tr: Gökhan GÖKKAYA <gokhanlnx@gmail.com>, Sabri Ünal <libreajans@gmail.com>",
 			"uk: Serhii Golovko <cappelikan@gmail.com>",
 		};
 
@@ -532,7 +532,7 @@ public class MainWindow : Gtk.Window{
 		dialog.third_party = {
 			"Elementary project (various icons):github.com/elementary/icons",
 			"Tango project (various icons):tango.freedesktop.org/Tango_Desktop_Project",
-			"notify-send.sh:github.com/vlevit/notify-send.sh"
+			"notify-send.sh:github.com/bkw777/notify-send.sh"
 		};
 
 		dialog.initialize();
@@ -663,7 +663,7 @@ public class MainWindow : Gtk.Window{
 		}
 	}
 
-	public void install(LinuxKernel kern){
+	public void kinst(LinuxKernel kern){
 
 		// check if installed
 		if (kern.is_installed){

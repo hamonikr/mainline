@@ -138,7 +138,7 @@ namespace TeeJee.ProcessHelper{
 	}
 
 	// manage process ---------------------------------
-	
+
 	public void process_quit(Pid process_pid, bool killChildren = true){
 
 		/* Kills specified process and its children (optional).
@@ -146,13 +146,22 @@ namespace TeeJee.ProcessHelper{
 		 * */
 
 		int[] child_pids = get_process_children (process_pid);
+
+#if VALA_0_40
 		Posix.kill (process_pid, Posix.Signal.TERM);
+#else
+		Posix.kill (process_pid, Posix.SIGTERM);
+#endif
 
 		if (killChildren){
 			Pid childPid;
 			foreach (long pid in child_pids){
 				childPid = (Pid) pid;
+#if VALA_0_40
 				Posix.kill (childPid, Posix.Signal.TERM);
+#else
+				Posix.kill (childPid, Posix.SIGTERM);
+#endif
 			}
 		}
 	}

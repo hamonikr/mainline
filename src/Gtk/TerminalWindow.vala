@@ -177,8 +177,7 @@ public class TerminalWindow : Gtk.Window {
 	}
 
 	public void execute_script(string f, string d, bool wait = false){
-		string[] argv = new string[1];
-		argv[0] = f;
+		string[] argv = {"sh", f};
 
 		string[] env = Environ.get();
 
@@ -191,7 +190,7 @@ public class TerminalWindow : Gtk.Window {
 				d, //working_directory
 				argv, //argv
 				env, //env
-				GLib.SpawnFlags.SEARCH_PATH | GLib.SpawnFlags.DO_NOT_REAP_CHILD, //spawn_flags
+				GLib.SpawnFlags.SEARCH_PATH, //spawn_flags
 				null, //child_setup
 				out child_pid,
 				null

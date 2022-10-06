@@ -70,14 +70,15 @@ public class AppConsole : GLib.Object {
 		+ "  --install-latest    " + _("Install latest mainline kernel") + "\n"
 		+ "  --install-point     " + _("Install latest point update for current series") + "\n"
 		+ "  --install <name>    " + _("Install specified mainline kernel") + "(1)\n"
-		+ "  --remove <name>     " + _("Uninstall specified kernels") + "(2)\n"
-		+ "  --purge-old-kernels " + _("Remove installed kernels older than running kernel") + "\n"
+		+ "  --uninstall <name>  " + _("Uninstall specified kernel") + "(2)\n"
+		+ "  --uninstall-old     " + _("Uninstall kernels older than the running kernel") + "\n"
 		+ "  --download <name>   " + _("Download specified kernels") + "(2)\n"
 		+ "  --clean-cache       " + _("Remove files from application cache") + "\n"
-		+ "  --show-unstable     " + _("Show unstable and RC releases") + "\n"
 		+ "\n"
 		+ _("Options") + ":\n"
 		+ "\n"
+		+ "  --include-unstable  " + _("Include unstable and RC releases") + "\n"
+		+ "  --hide-unstable     " + _("Hide unstable and RC releases") + "\n"
 		+ "  --debug           " + _("Enable verbose debugging output") + "\n"
 		+ "  --yes             " + _("Assume Yes for all prompts (non-interactive mode)") + "\n"
 		+ "  --user            " + _("Override user") + "\n"
@@ -126,24 +127,30 @@ public class AppConsole : GLib.Object {
 				}
 				break;
 
+			case "--show-unstable":		// back compat
+			case "--include-unstable":
+				App.hide_unstable = false;
+				break;
+			case "--hide-unstable":
+				App.hide_unstable = true;
+				break;
+
 			case "--list":
 			case "--list-installed":
 			case "--check":
 			case "--notify":
 			case "--install-latest":
 			case "--install-point":
-			case "--purge-old-kernels":
+			case "--purge-old-kernels":	// back compat
+			case "--uninstall-old":
 			case "--clean-cache":
 				cmd = args[k].down();
-				break;
-			
-			case "--show-unstable":
-				App.hide_unstable = false;
 				break;
 
 			case "--download":
 			case "--install":
-			case "--remove":
+			case "--remove":	// back compat
+			case "--uninstall":
 				cmd = args[k].down();
 				
 				if (++k < args.length){
@@ -202,13 +209,14 @@ public class AppConsole : GLib.Object {
 
 			check_if_internet_is_active(true);
 
-			LinuxKernel.install_latest(false, App.confirm);
+			LinuxKernel.kinst_latest(false, App.confirm);
 			
 			break;
 
-		case "--purge-old-kernels":
+		case "--purge-old-kernels":	// back compat
+		case "--uninstall-old":
 
-			LinuxKernel.purge_old_kernels(App.confirm);
+			LinuxKernel.kunin_old(App.confirm);
 
 			break;
 			
@@ -220,7 +228,8 @@ public class AppConsole : GLib.Object {
 
 		case "--download":
 		case "--install":
-		case "--remove":
+		case "--remove":	// back compat
+		case "--uninstall":
 			if (cmd=="--download") check_if_internet_is_active();
 
 			LinuxKernel.query(true);
@@ -269,11 +278,12 @@ public class AppConsole : GLib.Object {
 			case "--download":
 				return LinuxKernel.download_kernels(list);
 	
-			case "--remove":
-				return LinuxKernel.remove_kernels(list);
+			case "--remove":	// back compat
+			case "--uninstall":
+				return LinuxKernel.kunin_list(list);
 				
 			case "--install":
-				return list[0].install();
+				return list[0].kinst();
 			}
 
 			break;
