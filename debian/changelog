@@ -1,3 +1,10 @@
+mainline (1.0.16-hamonikr2) stable; urgency=medium
+
+  * Fixed debian package build error
+   - Changed compat version 11 to 9
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 06 Oct 2022 12:55:48 +0900
+
 mainline (1.0.16-hamonikr1) stable; urgency=medium
 
   * Merged upstream latest source
