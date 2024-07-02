@@ -38,6 +38,7 @@ public class MainWindow : Window {
 	Button btn_uninstall;
 	Button btn_uninstall_old;
 	Button btn_reload;
+	Button btn_select;
 	Label lbl_info;
 	Spinner spn_info;
 	Gdk.Pixbuf pix_ubuntu;
@@ -349,6 +350,25 @@ public class MainWindow : Window {
 		btn_uninstall_old.set_tooltip_text(_("Uninstall everything except:\n* the highest installed version\n* the currently running kernel\n* any kernels that are locked"));
 		hbox.pack_start (btn_uninstall_old, true, true, 0);
 		btn_uninstall_old.clicked.connect(uninstall_old);
+
+		// select
+		button = new Gtk.Button.with_label (_("Boot Select"));
+		button.set_tooltip_text(_("Select the kernel to boot"));
+		hbox.pack_start (button, true, true, 0);
+		btn_select = button;
+
+		button.clicked.connect(() => {
+
+			try {
+				string standard_output, standard_error;
+				int exit_status;
+				Process.spawn_command_line_sync ("/usr/local/bin/boot-select", out standard_output,
+																					out standard_error,
+																					out exit_status);
+			} catch (SpawnError e) {
+				stderr.printf ("%s\n", e.message);
+			}
+		});
 
 		// reload
 		btn_reload = new Button.with_label (_("Reload"));

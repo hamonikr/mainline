@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline 1.4.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 17:04+0900\n"
+"POT-Creation-Date: 2024-07-02 17:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Architecture"
 msgstr ""
 
-#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:499
+#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:519
 msgid "Running"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgid "Packages Installed"
 msgstr ""
 
 #: src/Common/LinuxKernel.vala:853 src/Console/AppConsole.vala:70
-#: src/Gtk/MainWindow.vala:200
+#: src/Gtk/MainWindow.vala:201
 msgid "Notes"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Available Kernels"
 msgstr ""
 
-#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:149
+#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:150
 msgid "Kernel"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgstr ""
 msgid "!!! Error running %s"
 msgstr ""
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:345
 msgid "Unable to launch"
 msgstr ""
 
@@ -536,7 +536,7 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:328
+#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:329
 msgid "Install"
 msgstr ""
 
@@ -548,27 +548,27 @@ msgstr ""
 msgid "Unknown option"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:172
+#: src/Gtk/MainWindow.vala:173
 msgid "Lock"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:189
+#: src/Gtk/MainWindow.vala:190
 msgid "Status"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:333
+#: src/Gtk/MainWindow.vala:334
 msgid "Uninstall"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Changelog, build status, etc"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:348
+#: src/Gtk/MainWindow.vala:349
 msgid "Uninstall Old"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:349
+#: src/Gtk/MainWindow.vala:350
 msgid ""
 "Uninstall everything except:\n"
 "* the highest installed version\n"
@@ -576,47 +576,55 @@ msgid ""
 "* any kernels that are locked"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:354
+#: src/Gtk/MainWindow.vala:355
+msgid "Boot Select"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:356
+msgid "Select the kernel to boot"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:374
 msgid "Reload"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:355
+#: src/Gtk/MainWindow.vala:375
 msgid ""
 "Delete and reload all cached kernel info\n"
 "(the same as \"mainline --delete-cache\")"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:360
+#: src/Gtk/MainWindow.vala:380
 msgid "Settings"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:365
+#: src/Gtk/MainWindow.vala:385
 msgid "About"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:370
+#: src/Gtk/MainWindow.vala:390
 msgid "Exit"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:431
+#: src/Gtk/MainWindow.vala:451
 msgid ""
 "A tool for installing kernel packages\n"
 "from the Ubuntu Mainline Kernels PPA"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:433
+#: src/Gtk/MainWindow.vala:453
 msgid "Original"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:434
+#: src/Gtk/MainWindow.vala:454
 msgid "Forked"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:444
+#: src/Gtk/MainWindow.vala:464
 msgid "Updating Kernels..."
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:502
+#: src/Gtk/MainWindow.vala:522
 msgid "available"
 msgstr ""
 

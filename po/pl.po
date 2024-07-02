@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 01:53-0400\n"
+"POT-Creation-Date: 2024-07-02 17:39+0900\n"
 "PO-Revision-Date: 2023-08-10 00:24+0200\n"
 "Last-Translator: Matthaiks\n"
 "Language-Team: Polish\n"
@@ -20,7 +20,7 @@ msgstr "Dystrybucja"
 msgid "Architecture"
 msgstr "Architektura"
 
-#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:499
+#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:519
 msgid "Running"
 msgstr "Uruchomione"
 
@@ -89,7 +89,7 @@ msgid "Packages Installed"
 msgstr "Zainstalowane pakiety"
 
 #: src/Common/LinuxKernel.vala:853 src/Console/AppConsole.vala:70
-#: src/Gtk/MainWindow.vala:200
+#: src/Gtk/MainWindow.vala:201
 msgid "Notes"
 msgstr "Notatki"
 
@@ -121,7 +121,7 @@ msgstr "wymaga aktualizacji"
 msgid "Available Kernels"
 msgstr "Dostępne jądra"
 
-#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:149
+#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:150
 msgid "Kernel"
 msgstr "Jądro"
 
@@ -291,7 +291,7 @@ msgstr "Nie można dotrzeć do witryny"
 msgid "!!! Error running %s"
 msgstr "!!! Błąd podczas uruchamiania %s"
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:345
 msgid "Unable to launch"
 msgstr "Nie można uruchomić"
 
@@ -542,7 +542,7 @@ msgstr "Dostępne jądro %s"
 msgid "Show"
 msgstr "Pokaż"
 
-#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:328
+#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:329
 msgid "Install"
 msgstr "Zainstaluj"
 
@@ -554,27 +554,27 @@ msgstr "Wcześniej powiadomiono"
 msgid "Unknown option"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:172
+#: src/Gtk/MainWindow.vala:173
 msgid "Lock"
 msgstr "Zablokuj"
 
-#: src/Gtk/MainWindow.vala:189
+#: src/Gtk/MainWindow.vala:190
 msgid "Status"
 msgstr "Stan"
 
-#: src/Gtk/MainWindow.vala:333
+#: src/Gtk/MainWindow.vala:334
 msgid "Uninstall"
 msgstr "Odinstaluj"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Changelog, build status, etc"
 msgstr "Dziennik zmian, status kompilacji itd."
 
-#: src/Gtk/MainWindow.vala:348
+#: src/Gtk/MainWindow.vala:349
 msgid "Uninstall Old"
 msgstr "Odinstaluj stare"
 
-#: src/Gtk/MainWindow.vala:349
+#: src/Gtk/MainWindow.vala:350
 msgid ""
 "Uninstall everything except:\n"
 "* the highest installed version\n"
@@ -586,11 +586,19 @@ msgstr ""
 "* aktualnie działającego jądra\n"
 "* wszelkich jąder, które są zablokowane"
 
-#: src/Gtk/MainWindow.vala:354
+#: src/Gtk/MainWindow.vala:355
+msgid "Boot Select"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:356
+msgid "Select the kernel to boot"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:374
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: src/Gtk/MainWindow.vala:355
+#: src/Gtk/MainWindow.vala:375
 msgid ""
 "Delete and reload all cached kernel info\n"
 "(the same as \"mainline --delete-cache\")"
@@ -598,19 +606,19 @@ msgstr ""
 "Usuń i wczytaj ponownie wszystkie informacje o jądrze\n"
 "z pamięci podręcznej (to samo co „mainline --delete-cache”)"
 
-#: src/Gtk/MainWindow.vala:360
+#: src/Gtk/MainWindow.vala:380
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/Gtk/MainWindow.vala:365
+#: src/Gtk/MainWindow.vala:385
 msgid "About"
 msgstr "O programie"
 
-#: src/Gtk/MainWindow.vala:370
+#: src/Gtk/MainWindow.vala:390
 msgid "Exit"
 msgstr "Wyjdź"
 
-#: src/Gtk/MainWindow.vala:431
+#: src/Gtk/MainWindow.vala:451
 msgid ""
 "A tool for installing kernel packages\n"
 "from the Ubuntu Mainline Kernels PPA"
@@ -618,19 +626,19 @@ msgstr ""
 "Narzędzie do instalowania pakietów\n"
 "jąder z Ubuntu Mainline Kernels PPA"
 
-#: src/Gtk/MainWindow.vala:433
+#: src/Gtk/MainWindow.vala:453
 msgid "Original"
 msgstr "Oryginalne"
 
-#: src/Gtk/MainWindow.vala:434
+#: src/Gtk/MainWindow.vala:454
 msgid "Forked"
 msgstr "Sforkowane"
 
-#: src/Gtk/MainWindow.vala:444
+#: src/Gtk/MainWindow.vala:464
 msgid "Updating Kernels..."
 msgstr "Aktualizowanie jąder..."
 
-#: src/Gtk/MainWindow.vala:502
+#: src/Gtk/MainWindow.vala:522
 msgid "available"
 msgstr "dostępne"
 

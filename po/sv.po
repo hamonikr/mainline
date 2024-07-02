@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 01:53-0400\n"
+"POT-Creation-Date: 2024-07-02 17:39+0900\n"
 "PO-Revision-Date: 2018-01-13 16:56+0100\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team:Swedish\n"
@@ -21,7 +21,7 @@ msgstr "Distribution"
 msgid "Architecture"
 msgstr "Arkitektur"
 
-#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:499
+#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:519
 msgid "Running"
 msgstr "Pågående"
 
@@ -90,7 +90,7 @@ msgid "Packages Installed"
 msgstr "Installerade paket"
 
 #: src/Common/LinuxKernel.vala:853 src/Console/AppConsole.vala:70
-#: src/Gtk/MainWindow.vala:200
+#: src/Gtk/MainWindow.vala:201
 msgid "Notes"
 msgstr "Anteckningar"
 
@@ -122,7 +122,7 @@ msgstr "behöver uppdateras"
 msgid "Available Kernels"
 msgstr "Tillgängliga kärnor"
 
-#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:149
+#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:150
 msgid "Kernel"
 msgstr "Kärna"
 
@@ -290,7 +290,7 @@ msgstr "Kan inte nå webbplatsen"
 msgid "!!! Error running %s"
 msgstr ""
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:345
 msgid "Unable to launch"
 msgstr "Oförmögen att starta"
 
@@ -539,7 +539,7 @@ msgstr "Kernel %s tillgängliga"
 msgid "Show"
 msgstr "Visa"
 
-#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:328
+#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:329
 msgid "Install"
 msgstr "Installera"
 
@@ -551,27 +551,27 @@ msgstr "Tidigare anmält"
 msgid "Unknown option"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:172
+#: src/Gtk/MainWindow.vala:173
 msgid "Lock"
 msgstr "Låsa"
 
-#: src/Gtk/MainWindow.vala:189
+#: src/Gtk/MainWindow.vala:190
 msgid "Status"
 msgstr "Status"
 
-#: src/Gtk/MainWindow.vala:333
+#: src/Gtk/MainWindow.vala:334
 msgid "Uninstall"
 msgstr "Avinstallera"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Changelog, build status, etc"
 msgstr "Ändringslogg, byggstatus, etc"
 
-#: src/Gtk/MainWindow.vala:348
+#: src/Gtk/MainWindow.vala:349
 msgid "Uninstall Old"
 msgstr "Avinstallera Gamla"
 
-#: src/Gtk/MainWindow.vala:349
+#: src/Gtk/MainWindow.vala:350
 msgid ""
 "Uninstall everything except:\n"
 "* the highest installed version\n"
@@ -583,11 +583,19 @@ msgstr ""
 "* den kärna som för närvarande körs\n"
 "* alla kärnor som är låsta"
 
-#: src/Gtk/MainWindow.vala:354
+#: src/Gtk/MainWindow.vala:355
+msgid "Boot Select"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:356
+msgid "Select the kernel to boot"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:374
 msgid "Reload"
 msgstr "Reload"
 
-#: src/Gtk/MainWindow.vala:355
+#: src/Gtk/MainWindow.vala:375
 msgid ""
 "Delete and reload all cached kernel info\n"
 "(the same as \"mainline --delete-cache\")"
@@ -595,19 +603,19 @@ msgstr ""
 "Ta bort och ladda om all cachad kärninformation(samma som \"mainline --"
 "delete-cache\")"
 
-#: src/Gtk/MainWindow.vala:360
+#: src/Gtk/MainWindow.vala:380
 msgid "Settings"
 msgstr "Inställningar"
 
-#: src/Gtk/MainWindow.vala:365
+#: src/Gtk/MainWindow.vala:385
 msgid "About"
 msgstr "Om"
 
-#: src/Gtk/MainWindow.vala:370
+#: src/Gtk/MainWindow.vala:390
 msgid "Exit"
 msgstr "Utgång"
 
-#: src/Gtk/MainWindow.vala:431
+#: src/Gtk/MainWindow.vala:451
 msgid ""
 "A tool for installing kernel packages\n"
 "from the Ubuntu Mainline Kernels PPA"
@@ -615,19 +623,19 @@ msgstr ""
 "Ett verktyg för att installera kärnpaket\n"
 "från Ubuntu Mainline Kernels PPA"
 
-#: src/Gtk/MainWindow.vala:433
+#: src/Gtk/MainWindow.vala:453
 msgid "Original"
 msgstr "Original"
 
-#: src/Gtk/MainWindow.vala:434
+#: src/Gtk/MainWindow.vala:454
 msgid "Forked"
 msgstr "Forked"
 
-#: src/Gtk/MainWindow.vala:444
+#: src/Gtk/MainWindow.vala:464
 msgid "Updating Kernels..."
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:502
+#: src/Gtk/MainWindow.vala:522
 msgid "available"
 msgstr "tillgänglig"
 

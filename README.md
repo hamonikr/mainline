@@ -1,73 +1,32 @@
-## mainline 우분투 커널 업그레이드 도구
+## 커널 업그레이드 도구 mainline
 
-이 프로그램은 `sudo apt upgrade` 를 통해 제공되지 않는 특정 버전 또는 최신 버전의 우분투 커널을 사용하고 싶은 경우
+이 프로그램은 특정 버전 또는 최신 버전의 우분투 커널을 사용하고 싶은 사용자가
+터미널을 사용하지 않고, GUI 를 통한 손쉬운 커널 업그레이드를 할 수 있도록 해주는 프로그램 입니다.
 
-터미널을 사용하지 않고 GUI 를 통한 손쉬운 커널 업그레이드를 제공하는 프로그램 입니다.
+별도의 터미널 명령을 몰라도, 누구나 쉽게 자신의 시스템 커널을 업그레이드 하거나 삭제할 수 있습니다.
 
-이 프로그램을 사용하면 누구나 쉽게 자신의 시스템 커널을 업그레이드 하거나 삭제할 수 있습니다.
+주의) 커널을 업그레이드 하면 시스템의 하드웨어가 정상적으로 동작하지 않을 수 있으니, 이전 커널로 복구하는 방법을 확인 후 새 커널을 설치하시기 바랍니다.
 
-주의) 커널을 업그레이드 하면 시스템의 하드웨어가 정상적으로 동작하지 않을 수 있습니다.
-
- * upstream : https://github.com/bkw777/mainline
- * latest version : 1.0.16
-
-Support OS : Linux OS based on Ubuntu(HamoniKR, Kubuntu, Lubuntu, LinuxMint...) 
+ * Upstream : https://github.com/bkw777/mainline
+ * latest version : 1.4.10
 
 ### 스크린샷
-![Main window screenshot](imgs/main_window_ko.png)
+![Main window screenshot](./main_window.png)
 
 ### 부팅 시 사용될 커널을 설정할 수 있는 기능 제공
 
-![boot-select screenshot](imgs/main_window_ko_1.png)
+![boot-select screenshot](./boot-select.png)
 
 ## 프로그램 설치
 
-### 하모니카 사용자 (하모니카 3.0 이상)
-
-```
-sudo apt update
-sudo apt install mainline
-```
-
-### Ubuntu, LinuxMint 등 다른 배포판 사용자의 경우
+### Ubuntu, Debian, LinuxMint
 
 터미널을 열고(Ctrl+Alt+T) 아래 명령어를 입력하세요.
 ```
-# 하모니카 APT 저장소 추가 (우분투 22.04 이상)
-wget -qO- https://repo.hamonikr.org/hamonikr-app.apt | sudo -E bash -
+# 하모니카 APT 저장소 추가
+wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
 
-# 하모니카 APT 저장소 추가 (우분투 21.04 이하)
-curl -sL https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
-```
-
-```
 # 프로그램 설치
 sudo apt install mainline
 ```
-
-## build
-
-### Build & Test
-
-```
-sudo apt install libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
-
-git clone https://github.com/hamonikr/mainline.git
-
-cd mainline
-make
-sudo make install
-```
-
-### uninstall
-
-```
-sudo make uninstall
-```
-
-### About
-
-mainline is a fork of [ukuu](https://github.com/teejee2008/ukuu)
-
-The original author stopped maintaining the original GPL version of ukuu and switched to a [paid license](https://teejeetech.in/tag/ukuu/) for future versions.
 

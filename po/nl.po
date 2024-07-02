@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 01:53-0400\n"
+"POT-Creation-Date: 2024-07-02 17:39+0900\n"
 "PO-Revision-Date: 2020-08-23 13:55+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch (Netherlands)\n"
@@ -21,7 +21,7 @@ msgstr "Distributie"
 msgid "Architecture"
 msgstr "Architectuur"
 
-#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:499
+#: src/Common/LinuxKernel.vala:268 src/Gtk/MainWindow.vala:519
 msgid "Running"
 msgstr "In gebruik"
 
@@ -90,7 +90,7 @@ msgid "Packages Installed"
 msgstr "Geïnstalleerde pakketten"
 
 #: src/Common/LinuxKernel.vala:853 src/Console/AppConsole.vala:70
-#: src/Gtk/MainWindow.vala:200
+#: src/Gtk/MainWindow.vala:201
 msgid "Notes"
 msgstr "Notities"
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Available Kernels"
 msgstr "Beschikbare kernels"
 
-#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:149
+#: src/Common/LinuxKernel.vala:1018 src/Gtk/MainWindow.vala:150
 msgid "Kernel"
 msgstr "Kernel"
 
@@ -292,7 +292,7 @@ msgstr "Kan de site niet bereiken"
 msgid "!!! Error running %s"
 msgstr ""
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:345
 msgid "Unable to launch"
 msgstr ""
 
@@ -539,7 +539,7 @@ msgstr "Kernel %s is beschikbaar"
 msgid "Show"
 msgstr "Tonen"
 
-#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:328
+#: src/Console/AppConsole.vala:415 src/Gtk/MainWindow.vala:329
 msgid "Install"
 msgstr "Installeren"
 
@@ -551,27 +551,27 @@ msgstr "Eerder gemeld"
 msgid "Unknown option"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:172
+#: src/Gtk/MainWindow.vala:173
 msgid "Lock"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:189
+#: src/Gtk/MainWindow.vala:190
 msgid "Status"
 msgstr "Status"
 
-#: src/Gtk/MainWindow.vala:333
+#: src/Gtk/MainWindow.vala:334
 msgid "Uninstall"
 msgstr "Deïnstalleren"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Changelog, build status, etc"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:348
+#: src/Gtk/MainWindow.vala:349
 msgid "Uninstall Old"
 msgstr "Verwijder Oude"
 
-#: src/Gtk/MainWindow.vala:349
+#: src/Gtk/MainWindow.vala:350
 msgid ""
 "Uninstall everything except:\n"
 "* the highest installed version\n"
@@ -579,47 +579,55 @@ msgid ""
 "* any kernels that are locked"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:354
+#: src/Gtk/MainWindow.vala:355
+msgid "Boot Select"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:356
+msgid "Select the kernel to boot"
+msgstr ""
+
+#: src/Gtk/MainWindow.vala:374
 msgid "Reload"
 msgstr "Herladen"
 
-#: src/Gtk/MainWindow.vala:355
+#: src/Gtk/MainWindow.vala:375
 msgid ""
 "Delete and reload all cached kernel info\n"
 "(the same as \"mainline --delete-cache\")"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:360
+#: src/Gtk/MainWindow.vala:380
 msgid "Settings"
 msgstr "Instellingen"
 
-#: src/Gtk/MainWindow.vala:365
+#: src/Gtk/MainWindow.vala:385
 msgid "About"
 msgstr "Over"
 
-#: src/Gtk/MainWindow.vala:370
+#: src/Gtk/MainWindow.vala:390
 msgid "Exit"
 msgstr "Afsluiten"
 
-#: src/Gtk/MainWindow.vala:431
+#: src/Gtk/MainWindow.vala:451
 msgid ""
 "A tool for installing kernel packages\n"
 "from the Ubuntu Mainline Kernels PPA"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:433
+#: src/Gtk/MainWindow.vala:453
 msgid "Original"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:434
+#: src/Gtk/MainWindow.vala:454
 msgid "Forked"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:444
+#: src/Gtk/MainWindow.vala:464
 msgid "Updating Kernels..."
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:502
+#: src/Gtk/MainWindow.vala:522
 msgid "available"
 msgstr "beschikbaar"
 
