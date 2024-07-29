@@ -1,3 +1,10 @@
+mainline (1.4.10+hamonikr2) paektu; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR paektu
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 29 Jul 2024 15:18:59 +0900
+
 mainline (1.4.10+hamonikr1) unstable; urgency=medium
 
   * Release for ubuntu 24.04
